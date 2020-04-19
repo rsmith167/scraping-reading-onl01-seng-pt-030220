@@ -1,4 +1,4 @@
 require 'nokogiri'
 require 'open-uri'
-
-html = open("https://flatironschool.com/")
+doc = Nokogiri::HTML(open("https://playoverwatch.com/en-us/heroes"))
+doc.css("data-group = ["TANK"])
