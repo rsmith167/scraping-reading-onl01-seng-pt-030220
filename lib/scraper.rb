@@ -19,7 +19,7 @@ class Heros
             all_role_types << doc2.css(".h2").text #HERO ROLE
             all_heroes[ph1]["role"] = doc2.css(".h2").text
             all_heroes[ph1]["name"] = doc2.css(".hero-bio").css(".name").text
-            all_heroes[ph1]["occupation"] = doc2.css(".hero-[bio").css(".occupation").text
+            all_heroes[ph1]["occupation"] = doc2.css(".hero-bio").css(".occupation").text
             all_heroes[ph1]["base"] = doc2.css(".hero-bio").css(".base").text
             all_affiliation_types << doc2.css(".hero-bio").css(".affiliation").text
             all_heroes[ph1]["affiliation"] = doc2.css(".hero-bio").css(".affiliation").text
