@@ -40,7 +40,7 @@ class Heros
               all_affiliation_types = all_affiliation_types.collect {|x| x}.uniq
   end
   ar = []
-  all_hero_names.each {|x|   
+  all_hero_names.collect {|x|   
   if all_heroes[x]["role"] == "Tank"
    ar << x
   end
