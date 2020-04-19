@@ -3,8 +3,9 @@ require 'open-uri'
 doc = Nokogiri::HTML(open("https://playoverwatch.com/en-us/heroes"))
 hero_array = doc.css(".hero-portrait-detailed")
 hero_name_array = hero_array.collect {
-  |hero_xml| hero_xml
-  
+  |hero_xml| 
+  placeholder = hero_xml.text
+  placeholder.downcase!
 }
 
     heroname.downcase!
