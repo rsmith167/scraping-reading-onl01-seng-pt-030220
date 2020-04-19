@@ -7,6 +7,7 @@ class Heros
     all_role_types = []
     all_affiliation_types = []
     all_heroes = {}
+    doc5 = 
     doc1 = Nokogiri::HTML(open("https://playoverwatch.com/en-us/heroes"))
     hero_array = doc1.css(".hero-portrait-detailed")
     hero_array.each { |hero_xml| 
