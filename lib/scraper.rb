@@ -52,7 +52,7 @@ class Heros
   
   ar = []
   all_hero_names.collect {|x|   
-  all_heroes[x]["role"] == "Tank"
+  all_heroes[x]["role"] = "Tank"
   }
   }
   
