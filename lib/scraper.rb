@@ -36,5 +36,5 @@ class Heros
             all_heroes[ph1]["affiliation"] = doc2.css(".hero-bio").css(".affiliation").text
             }
           end
-             all_role_types = all_role_types.collect {|x| x.uniq}
+             all_role_types = all_role_types.collect {|x| x}.uniq
   end
