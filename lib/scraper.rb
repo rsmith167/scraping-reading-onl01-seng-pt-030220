@@ -5,8 +5,7 @@ doc = Nokogiri::HTML(open("https://playoverwatch.com/en-us/heroes"))
     @@all_role_types = []
     @@all_affiliation_types = []
     @@all_heroes = {}
-    #this should probably be the def init portion
-    doc1 = Nokogiri::HTML(open("https://playoverwatch.com/en-us/heroes")) #make a list of all heros and their attributes
+    doc1 = Nokogiri::HTML(open("https://playoverwatch.com/en-us/heroes"))
     hero_array = doc1.css(".hero-portrait-detailed")
     hero_array.each { |hero_xml| 
             ph1 = hero_xml.text #get FIRST hero name from main page 
