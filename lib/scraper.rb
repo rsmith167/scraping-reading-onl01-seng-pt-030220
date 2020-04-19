@@ -2,7 +2,8 @@
 
 require 'nokogiri'
 require 'open-uri'
-doc = Nokogiri::HTML(open("https://playoverwatch.com/en-us/heroes"))
+class Heros
+  doc = Nokogiri::HTML(open("https://playoverwatch.com/en-us/heroes"))
    @@all_hero_names = []
     @@all_role_types = []
     @@all_affiliation_types = []
@@ -24,3 +25,4 @@ doc = Nokogiri::HTML(open("https://playoverwatch.com/en-us/heroes"))
             @@all_affiliation_types << doc2.css(".hero-bio").css(".affiliation").text
             @@all_heroes[ph1]["affiliation"] = doc2.css(".hero-bio").css(".affiliation").text
             }
+          end
