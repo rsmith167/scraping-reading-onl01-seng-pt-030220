@@ -1,7 +1,7 @@
 require 'nokogiri'
 require 'open-uri'
 doc = Nokogiri::HTML(open("https://playoverwatch.com/en-us/heroes"))
- @@all_hero_names = []
+   @@all_hero_names = []
     @@all_role_types = []
     @@all_affiliation_types = []
     @@all_heroes = {}
