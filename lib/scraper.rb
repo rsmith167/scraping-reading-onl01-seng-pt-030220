@@ -1,9 +1,9 @@
 require 'nokogiri'
 require 'open-uri'
 doc = Nokogiri::HTML(open("https://playoverwatch.com/en-us/heroes"))
-    #make a list of all heros and their attributes
-    
-    heroname = doc.css(".hero-portrait-detailed")[0].text #get FIRST hero name from main page 
+heroname = doc.css(".hero-portrait-detailed")[0].text
+
+
     heroname.downcase!
     hero = ""
     hero = "https://playoverwatch.com/en-us/heroes/" + heroname
