@@ -10,9 +10,9 @@ class Heros
     doc1 = Nokogiri::HTML(open("https://playoverwatch.com/en-us/heroes"))
     hero_array = doc1.css(".hero-portrait-detailed")
     hero_array.each { |hero_xml| 
-            ph1 = hero_xml.text #get FIRST hero name from main page 
+            ph1 = hero_xml.text
             ph1.downcase!
-all_hero_names << ph1
+            all_hero_names << ph1
             all_heroes[ph1] = {}
             ph2 = "https://playoverwatch.com/en-us/heroes/" + ph1
             doc2 = Nokogiri::HTML(open(ph2)) #go to heroes page
