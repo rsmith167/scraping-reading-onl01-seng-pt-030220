@@ -47,5 +47,5 @@ class Heros
   }
   }
   
-  
+  all_heroes.collect {|x| x["role"] == "Tank"}
   
