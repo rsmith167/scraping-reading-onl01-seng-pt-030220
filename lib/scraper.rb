@@ -11,6 +11,17 @@ class Heros
     hero_array = doc1.css(".hero-portrait-detailed")
     hero_array.each { |hero_xml| 
             ph1 = hero_xml.text
+            if ph1 == "D.Va"
+                ph1 = "dva"
+            elsif ph1 == "Lúcio"
+                ph1 = "lucio"
+            elsif ph1 == "Soldier: 76"
+                ph1 = "soldier-76"
+            elsif ph1 == "Torbjörn"
+                ph1 = "torbjorn"
+            elsif ph1 == "Wrecking Ball"
+                ph1 = "wrecking-ball"
+            end
             ph1.downcase!
             all_hero_names << ph1
             all_heroes[ph1] = {}
